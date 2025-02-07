@@ -14,7 +14,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 class CustomImageDataset(Dataset):
-    def __init__(self, csv_file = "climbing_data_use_this_one.csv", image_dir = "C:/Users/14077/Documents/Climbing Hold Images", transform=None):
+    def __init__(self, csv_file = "climbing_data_use_this_one.csv", image_dir = "enter_file_destination", transform=None): # use own file destination
         self.annotations = pd.read_csv(csv_file)
         self.image_dir = image_dir
         self.transform = transform
